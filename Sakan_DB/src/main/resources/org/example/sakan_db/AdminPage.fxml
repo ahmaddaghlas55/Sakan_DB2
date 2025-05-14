@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sakan_db.controllers.Admin">
+   <children>
+      <Text fill="WHITE" layoutX="112.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAKAN">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="406.0" fitWidth="152.0" layoutY="-5.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../img/18991975_6072833.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="48.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/icons8-home-500.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="58.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sakan" textAlignment="CENTER" wrappingWidth="92.33333333333337">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Line endX="428.95953369140625" endY="1.1444091796875E-5" layoutX="190.0" layoutY="89.0" startX="-189.3333282470703" startY="1.1444091796875E-5" />
+      <ImageView id="profileImage" fitHeight="53.0" fitWidth="58.0" layoutX="162.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/teacher-4.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="161.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.019607843831181526" green="0.27843138575553894" blue="0.6431372761726379" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.18568232662192388">
+                     <color>
+                        <Color red="0.019607843831181526" green="0.27843138575553894" blue="0.6431372761726379" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.05098039284348488" green="0.529411792755127" blue="0.8784313797950745" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Label fx:id="AdminName" layoutX="162.0" layoutY="74.0" prefHeight="18.0" prefWidth="64.0" style="-fx-text-fill: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);" text="Name" textAlignment="CENTER" textFill="#f40808" />
+      <Label fx:id="todayDate" layoutX="508.0" layoutY="37.0" prefHeight="30.0" prefWidth="92.0" style="-fx-text-fill: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);" text="3/5/2025" textAlignment="CENTER" textFill="#f40808">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="HomeBtn" layoutX="21.0" layoutY="97.0" mnemonicParsing="false" onAction="#HomeCliked" prefHeight="35.0" prefWidth="110.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);;" text="Home" />
+      <Button fx:id="AddCustomerBtn" layoutX="21.0" layoutY="138.0" mnemonicParsing="false" onAction="#Customerclikced" prefHeight="35.0" prefWidth="110.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);;" text="Customer" />
+      <Button fx:id="AddPropertyBtn" layoutX="21.0" layoutY="180.0" mnemonicParsing="false" onAction="#propertyCliked" prefHeight="35.0" prefWidth="110.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);;" text="Property" />
+      <Button fx:id="AddOwnerBtn" layoutX="21.0" layoutY="220.0" mnemonicParsing="false" onAction="#OwnerCliked" prefHeight="35.0" prefWidth="110.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);;" text="Owner" />
+      <Button fx:id="AddPaymentBtn" layoutX="21.0" layoutY="261.0" mnemonicParsing="false" onAction="#PaymentCliked" prefHeight="35.0" prefWidth="110.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);;" text="Payment" />
+      <Button fx:id="AddForSaleBtn" layoutX="21.0" layoutY="302.0" mnemonicParsing="false" onAction="#ForSaleCliked" prefHeight="35.0" prefWidth="110.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);;" text="For sale" />
+      <Button fx:id="ShowRepodtBtn" layoutX="21.0" layoutY="348.0" mnemonicParsing="false" onAction="#ReporteCliked" prefHeight="35.0" prefWidth="110.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);;" text="Report" />
+      <TextField fx:id="SearchBar" layoutX="242.0" layoutY="39.0" prefHeight="26.0" prefWidth="184.0" promptText="Search" />
+      <Button fx:id="SearchBtn" layoutX="435.0" layoutY="39.0" mnemonicParsing="false" onAction="#SearchCliked" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: transperant;" text="Search" />
+   </children>
+</AnchorPane>
