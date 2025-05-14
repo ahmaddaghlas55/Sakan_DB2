@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sakan_db.Sign_In">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="300.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../img/18991975_6072833.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="403.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <fill>
+            <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.0608999989926815" green="0.5463600158691406" blue="0.8700000047683716" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.14205816554809841">
+                     <color>
+                        <Color red="0.062745101749897" green="0.545098066329956" blue="0.8705882430076599" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.46756152125279643">
+                     <color>
+                        <Color red="0.019607843831181526" green="0.27843138575553894" blue="0.6431372761726379" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8467561521252795">
+                     <color>
+                        <Color red="0.019607843831181526" green="0.27843138575553894" blue="0.6431372761726379" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.019607843831181526" green="0.27843138575553894" blue="0.6431372761726379" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Text layoutX="355.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in to your account to continue">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="PasswordTextfld" alignment="TOP_CENTER" layoutX="357.0" layoutY="228.0" prefHeight="25.0" prefWidth="195.0" promptText="Password" />
+      <ImageView fitHeight="107.0" fitWidth="108.0" layoutX="97.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/icons8-home-500.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="112.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAKAN">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="385.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dont have an account ?" textAlignment="CENTER">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <fill>
+            <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.0608999989926815" green="0.5463600158691406" blue="0.8700000047683716" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.14205816554809841">
+                     <color>
+                        <Color red="0.0608999989926815" green="0.5463600158691406" blue="0.8700000047683716" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.46756152125279643">
+                     <color>
+                        <Color red="0.019607843831181526" green="0.27843138575553894" blue="0.6431372761726379" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.8467561521252795">
+                     <color>
+                        <Color red="0.019607843831181526" green="0.27843138575553894" blue="0.6431372761726379" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.019607843831181526" green="0.27843138575553894" blue="0.6431372761726379" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Button fx:id="CreateNewAccBtn" layoutX="415.0" layoutY="336.0" minWidth="51.0" mnemonicParsing="false" onAction="#createBtncliked" prefHeight="32.0" prefWidth="76.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);;" text="Create" />
+      <TextField fx:id="UsernameTextfil" alignment="TOP_CENTER" layoutX="358.0" layoutY="175.0" prefHeight="26.0" prefWidth="195.0" promptText="Username" />
+      <Button fx:id="BackBtn" layoutX="542.0" layoutY="350.0" mnemonicParsing="false"  onAction="#BackBtncliked" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4); -fx-background-radius: 20;">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="29.0"  pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+
+      <Button fx:id="SignIn" layoutX="415.0" layoutY="275.0" mnemonicParsing="false" onAction="#SignIncliked" prefHeight="26.0" prefWidth="76.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);" text="Sign In" />
+   </children>
+</AnchorPane>
