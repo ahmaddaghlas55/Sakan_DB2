@@ -1,4 +1,4 @@
-package com.sample;
+package org.example.sakan_db.TableClasss;
 
 
 public class Sakanpropertysale {
