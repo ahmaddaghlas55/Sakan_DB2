@@ -7,6 +7,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 public class AddCustomer {
     public AddCustomer() {
@@ -40,12 +43,38 @@ public void AddNewCustomer(){
     if(id.equals("") && name.equals("") && phone.equals("") && email.equals("") && pass.equals("")){
         System.out.println("Empty Fields");
     }
-    System.out.println(id);
-    System.out.println(name);
-    System.out.println(phone);
-    System.out.println(email);
-    System.out.println(pass);
+    else {
+        System.out.println(id);
+        System.out.println(name);
+        System.out.println(phone);
+        System.out.println(email);
+        System.out.println(pass);
 
+        try{
+            String A = "jdbc:postgresql://localhost:5432/postgres";
+            String U = "postgres";
+            String P = "doom";
+            Connection conn = DriverManager.getConnection(A, U, P);
+            conn.setAutoCommit(false);
+            Statement stmt = conn.createStatement();
+            String S = "insert into  sakancustomer(customer_ID,customerName,customerpassword,customerphonenumber,customeremail)values('"+id+"','"+name+"','"+pass+"','"+phone+"','"+email+"')";
+            stmt.executeUpdate(S);
+            conn.commit();
+            conn.close();
+
+
+
+
+        }
+        catch(Exception e){
+            System.out.println("Error: " + e);
+        }
+
+
+
+
+
+    }
     // Clear the text fields
     CustomerIDTF.setText("");
     CustomerNameTF.setText("");
@@ -57,19 +86,8 @@ public void AddNewCustomer(){
     //must replace these with the code to insert the data into the database typeshit
 
 }
-public void EditCustomerBtncliked(){
-    System.out.println("Edit Customer Button Clicked");
-    /*this will open a new window to edit the customer
-    * the idea is to select the customer from the database and edit it
-    * if you can make the edite in the same window as the add new customer
-    * you will get a kiss */
 
 
-}
-public void DeleteCustomerBtncliked(){
-    System.out.println("Delete Customer Button Clicked");
-    /*same as edit customer but just delete the customer from the database spreed love not legs */
-}
     public void BackBtncliked(ActionEvent event) throws IOException {
         System.out.println("Back Button Clicked");
 

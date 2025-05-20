@@ -8,6 +8,7 @@ module org.example.sakan_db {
     requires java.desktop;
     requires jdk.jfr;
     requires java.sql;
+    requires java.persistence;
 
     opens org.example.sakan_db to javafx.fxml;
     exports org.example.sakan_db;

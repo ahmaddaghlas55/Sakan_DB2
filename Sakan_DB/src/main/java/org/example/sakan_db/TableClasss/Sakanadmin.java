@@ -1,16 +1,33 @@
 package org.example.sakan_db.TableClasss;
 
+import javax.persistence.*;
+import java.sql.Date;
 
+@Entity
+@Table(name = "sakanadmin")  // optional, defaults to class name if omitted
 public class Sakanadmin {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "adminId") // map to your DB column name
   private long adminId;
+
+  @Column(name = "adminname", nullable = false)
   private String adminname;
+
+  @Column(name = "adminpassword", nullable = false)
   private String adminpassword;
+
+  @Column(name = "adminemail", nullable = false)
   private String adminemail;
-  private java.sql.Date datecreated;
+
+  @Column(name = "datecreated")
+  private Date datecreated;
+
+  @Column(name = "adminpic")
   private String adminpic;
 
-
+  // Getters and setters (same as before)
   public long getAdminId() {
     return adminId;
   }
@@ -18,7 +35,6 @@ public class Sakanadmin {
   public void setAdminId(long adminId) {
     this.adminId = adminId;
   }
-
 
   public String getAdminname() {
     return adminname;
@@ -28,7 +44,6 @@ public class Sakanadmin {
     this.adminname = adminname;
   }
 
-
   public String getAdminpassword() {
     return adminpassword;
   }
@@ -36,7 +51,6 @@ public class Sakanadmin {
   public void setAdminpassword(String adminpassword) {
     this.adminpassword = adminpassword;
   }
-
 
   public String getAdminemail() {
     return adminemail;
@@ -46,15 +60,13 @@ public class Sakanadmin {
     this.adminemail = adminemail;
   }
 
-
-  public java.sql.Date getDatecreated() {
+  public Date getDatecreated() {
     return datecreated;
   }
 
-  public void setDatecreated(java.sql.Date datecreated) {
+  public void setDatecreated(Date datecreated) {
     this.datecreated = datecreated;
   }
-
 
   public String getAdminpic() {
     return adminpic;
@@ -63,5 +75,4 @@ public class Sakanadmin {
   public void setAdminpic(String adminpic) {
     this.adminpic = adminpic;
   }
-
 }

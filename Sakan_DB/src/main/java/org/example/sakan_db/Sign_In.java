@@ -40,10 +40,10 @@ private void SignIncliked(ActionEvent event)throws Exception {
 
 }
 
-public void createBtncliked(){
+public void createBtncliked(ActionEvent event)throws Exception{
     System.out.println("Create Button Clicked");
 
-    SceneSwitcher.switchScene(null, "/org/example/sakan_db/CreateNew.fxml");
+    SceneSwitcher.switchScene(event, "/org/example/sakan_db/CreateNew.fxml");
 
 
 

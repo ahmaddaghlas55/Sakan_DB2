@@ -11,8 +11,12 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.example.sakan_db.TableClasss.Sakanadmin;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.swing.plaf.synth.Region;
 import java.io.File;
+import java.sql.*;
 
 public class CreateNew {
     public CreateNew() {
@@ -81,20 +85,59 @@ public class CreateNew {
             System.out.println("Username: " + user);
             System.out.println("Password: " + pass);
             System.out.println("Image Path: " + imagePath);
-     /*  Sakanadmin ne = new Sakanadmin();
+
           try {
-              ne.setAdminname(user);  //this is i way to get the code maybe :)
+                String A = "jdbc:postgresql://localhost:5432/postgres";
+                    String U = "postgres";
+                    String P = "doom";
+              Connection conn = DriverManager.getConnection(A, U, P);
+              conn.setAutoCommit(false);
+              Statement stmt = conn.createStatement();
+                            //here we create a email (bad practis )
+                String tstmt = "insert into Sakanadmin (adminname,adminemail,adminpassword,adminpic,datecreated) values ('"+user+"','"+user+"@gmail.com','"+pass+"','"+imagePath+"',now())";;
+              stmt.executeUpdate(tstmt);
+                conn.commit();
+                conn.close();
+
           }
           catch (Exception e){
               System.out.println("Error: " + e);
-          }*/
-            // Save or process Admin account here
-        } else if (isUserSelected) {
+          }
+
+        } else if (isUserSelected) {// user = customer btw
             System.out.println("User Account Created");
             System.out.println("Username: " + user);
             System.out.println("Password: " + pass);
             System.out.println("Image Path: " + imagePath);
-            // Save or process User account here
+
+            try {
+                String A = "jdbc:postgresql://localhost:5432/postgres";
+                String U = "postgres";
+                String P = "doom";
+                Connection conn = DriverManager.getConnection(A, U, P);
+                conn.setAutoCommit(false);
+                Statement stmt = conn.createStatement();
+                // Use PreparedStatement for safety
+                String insertSQL = "INSERT INTO SakanUser (Username, UserPassword, PicPath) VALUES (?, ?, ?)";
+                PreparedStatement pstmt = conn.prepareStatement(insertSQL);
+                pstmt.setString(1, user);
+                pstmt.setString(2, pass);
+                pstmt.setString(3, imagePath);
+
+                pstmt.executeUpdate();
+                conn.commit();
+                pstmt.close();
+                conn.close();
+
+
+
+            } catch (Exception e) {
+                System.out.println("Error: " + e);
+            }
+
+
+
+
         }
         //remember to check for null
 
