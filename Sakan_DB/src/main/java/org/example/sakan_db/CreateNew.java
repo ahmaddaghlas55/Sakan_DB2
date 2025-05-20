@@ -1,5 +1,7 @@
 package org.example.sakan_db;
 
+
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -7,7 +9,9 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.example.sakan_db.TableClasss.Sakanadmin;
 
+import javax.swing.plaf.synth.Region;
 import java.io.File;
 
 public class CreateNew {
@@ -77,6 +81,13 @@ public class CreateNew {
             System.out.println("Username: " + user);
             System.out.println("Password: " + pass);
             System.out.println("Image Path: " + imagePath);
+     /*  Sakanadmin ne = new Sakanadmin();
+          try {
+              ne.setAdminname(user);  //this is i way to get the code maybe :)
+          }
+          catch (Exception e){
+              System.out.println("Error: " + e);
+          }*/
             // Save or process Admin account here
         } else if (isUserSelected) {
             System.out.println("User Account Created");
