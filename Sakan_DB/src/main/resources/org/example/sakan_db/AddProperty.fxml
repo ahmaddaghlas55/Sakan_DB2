@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
@@ -13,24 +14,24 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sakan_db.AddProperty">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sakan_db.AddProperty">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="300.0" pickOnBounds="true">
+      <ImageView fitHeight="419.0" fitWidth="300.0" pickOnBounds="true">
          <image>
             <Image url="@../../../img/18991975_6072833.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="138.0" layoutX="75.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="138.0" layoutX="75.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../img/Property.PNG" />
          </image>
       </ImageView>
-      <Text fill="#f7efef" layoutX="75.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAKAN" textAlignment="CENTER" wrappingWidth="138.0">
+      <Text fill="#f7efef" layoutX="75.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SAKAN" textAlignment="CENTER" wrappingWidth="138.0">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Text fill="#3113d9" layoutX="380.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Property " textAlignment="CENTER" wrappingWidth="174.22894287109375">
+      <Text layoutX="380.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Property " textAlignment="CENTER" wrappingWidth="174.22894287109375">
          <font>
             <Font size="24.0" />
          </font>
@@ -51,34 +52,36 @@
             </RadialGradient>
          </stroke>
       </Text>
-      <Button fx:id="AddPropertyBtn" layoutX="309.0" layoutY="316.0" mnemonicParsing="false" onAction="#AddProperty" prefHeight="56.0" prefWidth="76.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4); -fx-background-radius: 20;" text="Add" />
-      <Button fx:id="EditPropertyBtn" layoutX="391.0" layoutY="316.0" mnemonicParsing="false" onAction="#EditPropertyBtncliked" prefHeight="56.0" prefWidth="76.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4); -fx-background-radius: 20;" text="Edit" />
-      <Button fx:id="DeletePropertyBtn" layoutX="470.0" layoutY="316.0" mnemonicParsing="false" onAction="#DeletePropertyBtncliked" prefHeight="56.0" prefWidth="76.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4); -fx-background-radius: 20;" text="Delete" />
-       <Button fx:id="BackBtn" layoutX="542.0" layoutY="350.0" mnemonicParsing="false" onAction="#BackBtncliked" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4); -fx-background-radius: 20;">
-           <graphic>
-               <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                   <image>
-                       <Image url="@../../../img/back.png" />
-                   </image>
-               </ImageView>
-           </graphic>
-       </Button>
-      <Label alignment="CENTER" layoutX="309.0" layoutY="60.0" prefHeight="18.0" prefWidth="120.0" text="Country" textAlignment="CENTER" textFill="#3113d9" />
-      <TextField fx:id="ContryTF" layoutX="440.0" layoutY="57.0" />
-      <Label alignment="CENTER" layoutX="309.0" layoutY="92.0" prefHeight="18.0" prefWidth="120.0" text="Property Type" textAlignment="CENTER" textFill="#3113d9" />
-      <Label alignment="CENTER" layoutX="309.0" layoutY="123.0" prefHeight="18.0" prefWidth="120.0" text="Number of Rooms" textAlignment="CENTER" textFill="#3113d9" />
-      <TextField fx:id="numOfRoomTF" layoutX="440.0" layoutY="120.0" />
-      <TextField fx:id="PriceTF" layoutX="439.0" layoutY="151.0" prefHeight="26.0" prefWidth="150.0" />
-      <Label alignment="CENTER" layoutX="309.0" layoutY="155.0" prefHeight="18.0" prefWidth="120.0" text="Price" textAlignment="CENTER" textFill="#3113d9" />
-      <TextField fx:id="StreetTF" layoutX="439.0" layoutY="181.0" />
-      <Label alignment="CENTER" layoutX="309.0" layoutY="184.0" prefHeight="18.0" prefWidth="120.0" text="Street" textAlignment="CENTER" textFill="#3113d9" />
-      <TextField fx:id="phoneNumberTF" layoutX="439.0" layoutY="212.0" />
-      <Label alignment="CENTER" layoutX="309.0" layoutY="216.0" prefHeight="18.0" prefWidth="120.0" text="Phone Number" textAlignment="CENTER" textFill="#3113d9" />
-      <TextField fx:id="CityTF" layoutX="440.0" layoutY="244.0" />
-      <Label alignment="CENTER" layoutX="309.0" layoutY="247.0" prefHeight="18.0" prefWidth="120.0" text="City" textAlignment="CENTER" textFill="#3113d9" />
-      <Label alignment="CENTER" layoutX="309.0" layoutY="281.0" prefHeight="18.0" prefWidth="120.0" text="Add photo" textAlignment="CENTER" textFill="#3113d9" />
-      <Button fx:id="AddPhotoBtn" layoutX="440.0" layoutY="277.0" mnemonicParsing="false" onAction="#AddPhoto" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4); -fx-background-radius: 20;" text="Add photo" />
-      <RadioButton fx:id="FLatRadBtn" layoutX="440.0" layoutY="93.0" mnemonicParsing="false" onAction="#flatBtnpressed" prefHeight="18.0" prefWidth="67.0" text="Flat" />
-      <RadioButton fx:id="HouseRadBtn" layoutX="521.0" layoutY="92.0" mnemonicParsing="false" onAction="#HouseBtnPreesed" prefHeight="18.0" prefWidth="67.0" text="House" />
+      <Button fx:id="AddPropertyBtn" layoutX="440.0" layoutY="368.0" mnemonicParsing="false" onAction="#AddProperty" prefHeight="35.0" prefWidth="67.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4); -fx-background-radius: 20;" text="Save" textFill="WHITE" />
+      <Button fx:id="BackBtn" layoutX="543.0" layoutY="368.0" mnemonicParsing="false" onAction="#BackBtncliked" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4); -fx-background-radius: 20;">
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" layoutX="309.0" layoutY="89.0" prefHeight="18.0" prefWidth="120.0" text="Country" textAlignment="CENTER" />
+      <TextField fx:id="ContryTF" layoutX="440.0" layoutY="86.0" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="121.0" prefHeight="18.0" prefWidth="120.0" text="Property Type" textAlignment="CENTER" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="152.0" prefHeight="18.0" prefWidth="120.0" text="Number of Rooms" textAlignment="CENTER" />
+      <TextField fx:id="numOfRoomTF" layoutX="440.0" layoutY="149.0" />
+      <TextField fx:id="PriceTF" layoutX="439.0" layoutY="180.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="184.0" prefHeight="18.0" prefWidth="120.0" text="Price" textAlignment="CENTER" />
+      <TextField fx:id="StreetTF" layoutX="439.0" layoutY="210.0" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="213.0" prefHeight="18.0" prefWidth="120.0" text="Street" textAlignment="CENTER" />
+      <TextField fx:id="phoneNumberTF" layoutX="439.0" layoutY="241.0" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="245.0" prefHeight="18.0" prefWidth="120.0" text="Phone Number" textAlignment="CENTER" />
+      <TextField fx:id="CityTF" layoutX="440.0" layoutY="273.0" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="276.0" prefHeight="18.0" prefWidth="120.0" text="City" textAlignment="CENTER" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="338.0" prefHeight="18.0" prefWidth="120.0" text="Add photo" textAlignment="CENTER" />
+      <Button fx:id="AddPhotoBtn" layoutX="438.0" layoutY="334.0" mnemonicParsing="false" onAction="#AddPhoto" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4); -fx-background-radius: 20;" text="Add photo" textFill="WHITE" />
+      <RadioButton fx:id="FLatRadBtn" layoutX="440.0" layoutY="122.0" mnemonicParsing="false" onAction="#flatBtnpressed" prefHeight="18.0" prefWidth="67.0" text="Flat" />
+      <RadioButton fx:id="HouseRadBtn" layoutX="521.0" layoutY="121.0" mnemonicParsing="false" onAction="#HouseBtnPreesed" prefHeight="18.0" prefWidth="67.0" text="House" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="58.0" prefHeight="18.0" prefWidth="120.0" text="Property ID" textAlignment="CENTER" />
+      <TextField fx:id="property_ID" layoutX="441.0" layoutY="55.0" />
+      <ChoiceBox fx:id="OwnerBox" layoutX="441.0" layoutY="303.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label alignment="CENTER" layoutX="309.0" layoutY="306.0" prefHeight="18.0" prefWidth="120.0" text="Owner" textAlignment="CENTER" />
    </children>
 </AnchorPane>

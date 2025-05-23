@@ -7,18 +7,63 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+//import javax.swing.text.html.ImageView;
+import javafx.scene.image.ImageView; // ✅ Correct JavaFX import
 
-import static org.example.sakan_db.SceneSwitcher.switchScene;
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDate;
 
 public class Admin{
-    @FXML private Button addCustomerBtn;
-    @FXML private Button addPropertyBtn;
-    @FXML private Button addOwnerBtn;
-    @FXML private Button addPaymentBtn;
-    @FXML private Button showReportBtn;
+    public Admin(){}
+
+    @FXML
+    private void initialize(){
+        LocalDate currentDate = LocalDate.now();
+        todayDate.setText(currentDate.toString()); // Formats as "2025-05-23"
+        todayDate.setPrefWidth(200);
+        AdminName.setText(storeAdminData.getAdminName());
+
+        String imagePath = storeAdminData.getAdminImagePath();
+        System.out.println("Loading admin image from: " + imagePath);
+
+        if (imagePath != null && new File(imagePath).exists()) {
+            Image img = new Image(new File(imagePath).toURI().toString());
+            admin_pic.setImage(img);
+        } else {
+            System.out.println("⚠️ Copied image not found or path is null");
+        }
+
+
+
+    }
+
+    @FXML
+    public Button addCustomerBtn;
+
+    @FXML
+    public Button addPropertyBtn;
+    @FXML
+    public Button addOwnerBtn;
+    @FXML
+    public Button addPaymentBtn;
+    @FXML
+    public Button showReportBtn;
+    @FXML
+    public Label todayDate;
+    @FXML
+    public Label AdminName;
+
+    @FXML
+    public ImageView admin_pic;
+
+
+
+
 
 
 

@@ -6,6 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 public class AddOwner {
     public AddOwner() {
@@ -45,12 +48,33 @@ public class AddOwner {
         if(id.equals("") && name.equals("") && phone.equals("") && email.equals("") && pass.equals("")){
             System.out.println("Empty Fields");
         }
-        System.out.println(id);
-        System.out.println(name);
-        System.out.println(phone);
-        System.out.println(address);
-        System.out.println(email);
-        System.out.println(pass);
+        else {
+            System.out.println(id);
+            System.out.println(name);
+            System.out.println(phone);
+            System.out.println(address);
+            System.out.println(email);
+            System.out.println(pass);
+
+            try{
+                String A = "jdbc:postgresql://localhost:5432/postgres";
+                String U = "postgres";
+                String P = "doom";
+                Connection conn = DriverManager.getConnection(A, U, P);
+                conn.setAutoCommit(false);
+                Statement stmt = conn.createStatement();
+                String S = "insert into  sakanowner(owner_ID,ownername,ownerpassword,ownerphonenumber,owneraddress,owneremail)values('"+id+"','"+name+"','"+pass+"','"+phone+"','"+address+"','"+email+"')";
+                stmt.executeUpdate(S);
+                conn.commit();
+                conn.close();
+
+
+            } catch (Exception e) {
+                System.out.println("Error: " + e);
+            }
+
+
+        }
         OwnerAddressTF.setText("");
         OwnerEmailTF.setText("");
         OwnerPassTF.setText("");
@@ -66,12 +90,8 @@ public class AddOwner {
 
     }
 
-
-    public void BackBtncliked(){
-        System.out.println("Back Button Clicked");
-    }
     public void EditOwner(){
-        System.out.println("Edit Owner Button Clicked");
+        System.out.println("Edit Owner Button Clicked");// won't be used
 
     }
     public void DeleteOwner(){
@@ -83,6 +103,7 @@ public class AddOwner {
         System.out.println("Back Button Clicked");
         // Navigate back to Report screen
         SceneSwitcher.switchScene(event, "/org/example/sakan_db/Report.fxml");
+
     }
 
 

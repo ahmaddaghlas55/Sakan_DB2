@@ -2,6 +2,7 @@ package org.example.sakan_db;
 
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -16,6 +17,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.swing.plaf.synth.Region;
 import java.io.File;
+import java.io.IOException;
 import java.sql.*;
 
 public class CreateNew {
@@ -104,7 +106,7 @@ public class CreateNew {
               System.out.println("Error: " + e);
           }
 
-        } else if (isUserSelected) {// user = customer btw
+        } else if (isUserSelected) {
             System.out.println("User Account Created");
             System.out.println("Username: " + user);
             System.out.println("Password: " + pass);
@@ -151,7 +153,9 @@ public class CreateNew {
 
 
     }
-    public void BackBtncliked(){
+    @FXML
+    public void BackBtncliked(ActionEvent event)throws IOException {
+        SceneSwitcher.switchScene(event, "/org/example/sakan_db/SignIn.fxml");
         System.out.println("Back Button Clicked");
     }
     public void SeleAdminRadBtnCl(){

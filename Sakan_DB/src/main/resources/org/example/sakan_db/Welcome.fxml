@@ -10,11 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;"
-            xmlns="http://javafx.com/javafx/17"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.example.sakan_db.welcome">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sakan_db.welcome">
    <children>
       <ImageView fitHeight="400.0" fitWidth="300.0" pickOnBounds="true">
          <image>
@@ -72,13 +68,7 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Button fx:id="selectyouAccountUserBtn" layoutX="366.0" layoutY="242.0" mnemonicParsing="false"
-              onAction="#onCustomerClick" prefHeight="35.0" prefWidth="173.0"
-              style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);"
-              text="User" />
-      <Button fx:id="selectyouAccountAdminBtn" layoutX="366.0" layoutY="183.0" mnemonicParsing="false"
-              onAction="#onAdminClick" prefHeight="35.0" prefWidth="173.0"
-              style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);"
-              text="Admin" />
+      <Button fx:id="selectyouAccountUserBtn" layoutX="366.0" layoutY="242.0" mnemonicParsing="false" onAction="#onCustomerClick" prefHeight="35.0" prefWidth="173.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);" text="User" textFill="WHITE" />
+      <Button fx:id="selectyouAccountAdminBtn" layoutX="366.0" layoutY="183.0" mnemonicParsing="false" onAction="#onAdminClick" prefHeight="35.0" prefWidth="173.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d87e0, #0547a4);" text="Admin" textFill="WHITE" />
    </children>
 </AnchorPane>
